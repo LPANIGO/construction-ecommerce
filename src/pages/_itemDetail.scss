@@ -1,0 +1,29 @@
+
+.itemDetailContainer {
+    display: grid;
+    grid-template-columns:  repeat(1, 0.55fr) repeat(2, 1fr);
+    grid-template-areas: ". a b";
+}
+
+.itemDetailContainerLoader {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 20vh 0 4rem 0;
+    height: 90vh;
+}
+
+.itemDetail__img{
+    grid-area: a;
+    justify-self: center;
+    padding-top: 2rem;
+}
+
+.itemDetail__info{
+    grid-area: b;
+    padding: 2rem 0 0 2rem;
+}
+
+.titulo {
+    padding-top: 2rem;
+}

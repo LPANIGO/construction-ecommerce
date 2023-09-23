@@ -1,0 +1,97 @@
+.dropdown {
+    position: relative;
+}
+
+.dropbtn{
+    display: inline-flex;
+    align-items: center;
+    background-color: $c4;
+    color: $c2;
+    padding: 1rem 2rem 1rem 1rem;
+    margin-left:3rem;
+    font-size: 1.4rem;
+    border: 0;
+    font-weight: 600;
+
+    & #menuToggle span {
+        display: block;
+        width: 20px;
+        height: 3px;
+        margin-bottom: 1.7px;
+        // position: relative;
+    
+        background-color: $c2;
+        border-radius: 3px;
+    }
+
+    & p{
+        padding-left: 1rem;
+    }
+}
+
+@keyframes growDown {
+    0% {
+        opacity: 0;
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1) //1.1
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1)
+    }
+}
+
+.mydropdown{
+    position: absolute;
+    background-color: $c2;
+    margin-left:3rem;
+    left: 0;
+    right: 0;
+    display: none;
+    opacity: 0;
+    height: 0;
+    overflow: auto;
+    
+    // transition: all 2s;
+
+    & .category {
+        color: $c1;
+        text-decoration: none;
+    }
+
+    & li{
+        opacity: 0;
+        display: none;
+        padding: 0.8rem 0 0.8rem 1rem;
+        border: 0.5px solid $c8;
+        border-top: solid 1px $c2;
+    }
+}
+
+.open {
+    display: block;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+    height: auto;
+    animation: growDown 150ms  ease-in-out forwards; 
+    transform-origin: top center;
+
+    @for $i from 1 through 6 {
+        .li#{$i} {
+            opacity: 1;
+            background-color: $c2;
+            display: block;
+            animation: growDown #{50ms + (50ms * $i)}  ease-in-out forwards; 
+            transform-origin: top center;
+        }
+        
+    }
+}
+
+
+
+
+
+

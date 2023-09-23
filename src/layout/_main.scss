@@ -1,0 +1,11 @@
+@import "../assets/styles/variables";
+
+.mainContainer {
+    background-color: $c7;
+}
+
+.main {
+    // flex-grow: 1;
+    background-color: $c9;
+    padding: 1rem calc((100% - 1250px)/2);
+}  

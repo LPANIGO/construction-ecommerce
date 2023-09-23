@@ -1,0 +1,32 @@
+$x: 100%;
+$y: 1250px;
+
+
+.navContainer {
+    background-color: $c3;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    
+}
+
+.nav {
+    background-color: $c3;
+    display: flex;
+    align-items: center;
+    padding: 0 calc((#{$x} - #{$y})/2);
+    &__link{
+        padding: 0.5rem 2rem 0.5rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: $c2;
+    }
+}
+
+.cartLink {
+    color: $c6;
+}
+
+
+
