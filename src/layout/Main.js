@@ -11,6 +11,7 @@ const Main = () => {
         <>
         {location.pathname === "/" && <Carrousel/>}
         {location.pathname === "/construction-ecommerce" && <Carrousel/>}
+        {location.pathname === "/construction-ecommerce/" && <Carrousel/>}
         <main className="main">
             
             <Routes>
