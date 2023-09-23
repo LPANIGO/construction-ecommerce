@@ -8,7 +8,7 @@ export const Item = ({e}) => {
         <>
         <Link to={`/producto/${e.id}`} className="itemList__item flexColum">
             <div>
-                <img src={`../images/${e.category}/${e.img}`} alt="placeholder"/>
+                <img src={`${process.env.PUBLIC_URL}/images/${e.category}/${e.img}`} alt="placeholder"/>
                 <h3>{e.title}</h3> 
             </div>
             <div>

@@ -5,7 +5,7 @@ const CarritoItem = ({e}) => {
     console.log("Render item")
     return (
         <div className="cartItem">
-            <img src={`../images/${e.category}/${e.img}`} alt=""/>
+            <img src={`${process.env.PUBLIC_URL}/images/${e.category}/${e.img}`} alt=""/>
             <p className="itemName">{e.name}</p>
             <CartItemCount quantity={e.quantity}/>
             <p>${e.price * e.quantity}</p>

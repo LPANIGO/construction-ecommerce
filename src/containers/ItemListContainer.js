@@ -574,7 +574,7 @@ const ItemListCointainer = (props) => {
                 <div className="itemListContainer">
                     {nombreCategoria && 
                     <div className="portadaCategoria">
-                        <img src={`../images/portada/${nombreCategoria}.jpg`} alt=""/>
+                        <img src={`${process.env.PUBLIC_URL}/images/portada/${nombreCategoria}.jpg`} alt=""/>
                     </div>
                     }
                     <ItemList productos={productos}/>

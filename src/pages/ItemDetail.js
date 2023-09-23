@@ -30,7 +30,7 @@ const ItemDetail = ({producto}) => {
     return (
         <>
             <div className="itemDetail__img">
-                <img src={`../images/${producto.category}/${producto.img}`} alt="placeholder"></img>
+                <img src={`${process.env.PUBLIC_URL}/images/${producto.category}/${producto.img}`} alt="placeholder"></img>
             </div>
             <div className="itemDetail__info">
                 <h3 className="titulo">{producto.title}</h3>
