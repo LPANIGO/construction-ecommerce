@@ -8,4 +8,10 @@
     // flex-grow: 1;
     background-color: $c9;
     padding: 1rem calc((100% - 1250px)/2);
-}  
+}
+
+.wp{
+    position: fixed;
+    bottom: 60px;
+	right: 4rem;
+}

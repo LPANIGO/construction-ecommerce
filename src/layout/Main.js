@@ -25,7 +25,11 @@ const Main = () => {
             {/*
             <ItemListCointainer/>
             <ItemDetailContainer/> */}
+            <a href="https://wa.me/<number>" className="wp">
+			    <img src={`${process.env.PUBLIC_URL}/images/whatsapp-logo.png`} alt="Whats app link"/>
+            </a>
         </main>
+        
         </>       
     )
 }

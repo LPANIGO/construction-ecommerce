@@ -39,7 +39,7 @@ const MyCustomProvider = ({children}) => {
     }
 
     const deleteProduct = (id) => {
-        const updatedCart = cart.map(e => e.id !== id);
+        const updatedCart = cart.filter( (e) =>  id !== e.id )
         setCart(updatedCart);
     }
 

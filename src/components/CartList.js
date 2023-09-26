@@ -1,14 +1,20 @@
 import CartItem from "./CartItem"
 import { memo } from "react";
+import { context } from "../context/myContext"
+import { useContext } from "react";
 
 const CartList = ({cart}) => {
 
+    const {deleteProduct} = useContext(context);
 
-    console.log(cart)
+    const handleDeleteAll = (id) => {
+        deleteProduct(id);
+    }
+
     return (
         <ul className="cartList">
             {cart.map( (e)=>{
-                return <CartItem className="cartItem" key={e.id} e={e}/>
+                return <CartItem className="cartItem" d={handleDeleteAll} key={e.id} e={e}/>
             })}
             <li></li>
         </ul>
