@@ -7,14 +7,14 @@ const CartList = ({cart}) => {
 
     const {deleteProduct} = useContext(context);
 
-    const handleDeleteAll = (id) => {
+    const handleDelete = (id) => {
         deleteProduct(id);
     }
 
     return (
         <ul className="cartList">
             {cart.map( (e)=>{
-                return <CartItem className="cartItem" d={handleDeleteAll} key={e.id} e={e}/>
+                return <CartItem className="cartItem" d={handleDelete} key={e.id} e={e}/>
             })}
             <li></li>
         </ul>

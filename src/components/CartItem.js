@@ -3,7 +3,7 @@ import CartItemCount from "../components/CartItemCount"
 
 const CarritoItem = ({d, e}) => {
     console.log("Render item")
-    const deleteAll = () => {
+    const deleteItems = () => {
         d(e.id);
     }
 
@@ -13,7 +13,7 @@ const CarritoItem = ({d, e}) => {
             <p className="itemName">{e.name}</p>
             <CartItemCount quantity={e.quantity}/>
             <p>${e.price * e.quantity}</p>
-            <span className="material-icons trashBin" onClick={deleteAll}>delete</span>
+            <span className="material-icons trashBin" onClick={deleteItems}>delete</span>
         </div>
     )
 }

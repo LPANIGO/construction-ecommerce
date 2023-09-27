@@ -39,8 +39,16 @@ const MyCustomProvider = ({children}) => {
     }
 
     const deleteProduct = (id) => {
-        const updatedCart = cart.filter( (e) =>  id !== e.id )
-        setCart(updatedCart);
+        let deletedProduct = {};
+        for( let e of cart){
+            if(id === e.id){
+                deletedProduct = e;
+            }
+        }
+        let newCart = cart.filter( e => e.id !== id);
+        const quantitySubstracted = deletedProduct.quantity;
+        setTotalQuantity((total_quantity) => total_quantity- quantitySubstracted);
+        setCart(newCart);
     }
 
     const emptyCart = () => {
