@@ -31,11 +31,14 @@ const MyCustomProvider = ({children}) => {
                 img: product.img
                 
             }
-            //2 MODIFICAR EL MODAL PARA QUE TENGA OPCION DE EXIT
             setTotalPrice((prevPrice) =>  prevPrice + (product.price*quantity) )
             setTotalQuantity((prevQuantity) =>  prevQuantity + quantity)
             setCart((prevCart) => [...prevCart, newProduct])
         }    
+    }
+
+    const isInCart = (id) => {
+        return !!cart.find( e => e.id === id);
     }
 
     const deleteProduct = (id) => {
@@ -46,8 +49,39 @@ const MyCustomProvider = ({children}) => {
             }
         }
         let newCart = cart.filter( e => e.id !== id);
-        const quantitySubstracted = deletedProduct.quantity;
-        setTotalQuantity((total_quantity) => total_quantity- quantitySubstracted);
+        const substractedQuantity = deletedProduct.quantity;
+        const substractedAmount = deletedProduct.price * substractedQuantity;
+
+        setTotalQuantity((total_quantity) => total_quantity - substractedQuantity);
+        setTotalPrice((total_price) => total_price - substractedAmount);
+        setCart(newCart);
+    }
+
+    const deleteUnit = (id) => {
+        let substractedAmount = 0;
+        let newCart = cart.map( e => {
+            if (e.id === id) {
+                e.quantity -= 1
+                substractedAmount = e.price;
+            }   
+            return e;
+        })
+        setTotalQuantity((total_quantity) => total_quantity -= 1);
+        setTotalPrice((total_price) => total_price - substractedAmount);
+        setCart(newCart);
+    }
+
+    const addUnit = (id) => {
+        let addedAmount = 0;
+        let newCart = cart.map( e => {
+            if (e.id === id) {
+                e.quantity += 1;
+                addedAmount = e.price;
+            } 
+            return e;
+        })
+        setTotalQuantity((total_quantity) => total_quantity += 1);
+        setTotalPrice((total_price) => total_price + addedAmount);
         setCart(newCart);
     }
 
@@ -57,10 +91,6 @@ const MyCustomProvider = ({children}) => {
         setTotalQuantity(0);
     }
 
-    const isInCart = (id) => {
-        return !!cart.find( e => e.id === id);
-    }
-
     const contextValue = {
         total_quantity,
         total_price,
@@ -68,7 +98,8 @@ const MyCustomProvider = ({children}) => {
         addProduct,
         deleteProduct,
         emptyCart,
-        isInCart        
+        deleteUnit, 
+        addUnit     
     }
 
     return (

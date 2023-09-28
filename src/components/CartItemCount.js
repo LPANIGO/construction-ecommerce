@@ -1,15 +1,17 @@
 import { useState } from "react"
 
-const CartItemCount = ({quantity}) => {
+const CartItemCount = ({quantity, deleteOne, addOne}) => {
 
     const[counter, setCounter] = useState(parseInt(quantity));
     
     const add = () => {
+        addOne();
         setCounter(counter+1);     
     }
     
     const subtract = () => {
         if ( counter > 1) {
+            deleteOne();
             setCounter(counter-1);
         }
     }

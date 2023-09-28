@@ -1,0 +1,4 @@
+
+- Actualizar precio y cantidad total del carrito al modificar cantidad de items con la botonera.
+- Modificar el modal para que tenga opción de exit.
+- Agregar formulario de contato.

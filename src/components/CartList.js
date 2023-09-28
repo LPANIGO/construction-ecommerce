@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 const CartList = ({cart}) => {
 
-    const {deleteProduct} = useContext(context);
+    const {deleteProduct, deleteUnit, addUnit} = useContext(context);
 
     const handleDelete = (id) => {
         deleteProduct(id);
@@ -14,7 +14,7 @@ const CartList = ({cart}) => {
     return (
         <ul className="cartList">
             {cart.map( (e)=>{
-                return <CartItem className="cartItem" d={handleDelete} key={e.id} e={e}/>
+                return <CartItem className="cartItem" d={handleDelete} du={deleteUnit} au={addUnit} key={e.id} e={e}/>
             })}
             <li></li>
         </ul>
