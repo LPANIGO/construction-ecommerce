@@ -3,6 +3,7 @@ import ItemDetailContainer from "../containers/ItemDetailContainer"
 import Carrousel from "../components/Carrousel"
 import { Routes, Route, useLocation } from "react-router-dom"
 import Cart from "../pages/Cart"
+import ContactUs from "../pages/ContactUs"
 
 const Main = () => {
     const location = useLocation();
@@ -20,6 +21,7 @@ const Main = () => {
                 <Route path="/productos/:nombreCategoria" element={<ItemListCointainer/>}/>
                 <Route path="/producto/:id" element={<ItemDetailContainer/>}/>
                 <Route path="/cart" element={<Cart/>}/>
+                <Route path="/contact-us" element={<ContactUs/>}/>
             </Routes>
             
             {/*
