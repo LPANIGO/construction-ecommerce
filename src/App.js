@@ -10,7 +10,7 @@ const App = () => {
     <>
       <MyCustomProvider>
         <BrowserRouter>
-        <div className="layout">
+        <div className="layout">     
           <div className="headerContainer"><Header/></div>        
           <div className="navContainer"><Nav/></div>
           <div className="mainContainer"><Main greeting="Welcome to this landing page!"/></div>

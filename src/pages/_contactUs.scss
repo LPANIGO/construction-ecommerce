@@ -13,7 +13,7 @@
         margin-top: 1rem;
     }
 
-    input{
+    input, select{
         padding: 8px 12px;
     }
 
@@ -31,4 +31,16 @@
         padding:1rem;
         min-height: 6rem;
     }
+
+
+}
+
+#result{
+    color: $c6;
+    padding: 1rem 0;
+}
+
+#result .form-ok{
+    color:$c1;
+    padding: 1rem 0;
 }

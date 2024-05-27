@@ -54,6 +54,9 @@
     opacity: 0;
     height: 0;
     overflow: auto;
+    border-width: 0 1px 1px 1px; 
+    border-style: solid; 
+    border-color: $c8;
     
     // transition: all 2s;
 
@@ -67,8 +70,7 @@
         opacity: 0;
         display: none;
         padding: 0.8rem 0 0.8rem 1rem;
-        border: 0.5px solid $c8;
-        border-top: solid 1px $c2;
+        border-top: 1px solid $c8;
     }
 }
 

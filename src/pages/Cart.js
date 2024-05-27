@@ -52,7 +52,7 @@ const Cart = () => {
         
     )
 }   
-export  default Cart   
+export default Cart   
 
 /* <h1>Carrito</h1>
         <h2>Precio total: {total_price}</h2>

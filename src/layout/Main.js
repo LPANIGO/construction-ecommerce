@@ -1,4 +1,4 @@
-import ItemListCointainer from "../containers/ItemListContainer"
+import ItemListContainer from "../containers/ItemListContainer"
 import ItemDetailContainer from "../containers/ItemDetailContainer"
 import Carrousel from "../components/Carrousel"
 import { Routes, Route, useLocation } from "react-router-dom"
@@ -16,9 +16,9 @@ const Main = () => {
         <main className="main">
             
             <Routes>
-                <Route path="/" element={<ItemListCointainer/>}/>
-                <Route path="/construction-ecommerce" element={<ItemListCointainer/>}/>
-                <Route path="/productos/:nombreCategoria" element={<ItemListCointainer/>}/>
+                <Route path="/" element={<ItemListContainer/>}/>
+                <Route path="/construction-ecommerce" element={<ItemListContainer/>}/>
+                <Route path="/productos/:nombreCategoria" element={<ItemListContainer/>}/>
                 <Route path="/producto/:id" element={<ItemDetailContainer/>}/>
                 <Route path="/cart" element={<Cart/>}/>
                 <Route path="/contact-us" element={<ContactUs/>}/>

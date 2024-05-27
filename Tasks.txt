@@ -1,6 +1,17 @@
 
 - Modificar el modal para que tenga opción de exit.
-- Agregar formulario de contato.
+- Validaciónes en formulario de contacto.
 - Crear variables de tamaño de texto
 - Hacer el sitio responsive
 - Unificar buttom style
+- Cancelar botonera debajo del modal al comprar
+- Diseñar carta de producto con descuento
+
+
+Home:
+- Seccion con img/link a cuatro categorias
+- Seccion con img en descuento
+- Seccion tecnologia
+- Seccion perfumes
+- Blog de noticias
+- Form de contacto al final
